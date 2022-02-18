@@ -11,14 +11,6 @@ body.index {
   width: 100%;
 }
 
-body.bg-mf {
-  font-family: Arial, Helvetica, sans-serif;
-  background-image: url(../assets/img/megalos-background.png);
-  background-position: top;
-  width: 100%;
-  margin: 0%;
-}
-
 /*
     -- Debut Navigations du site --
   */
@@ -46,7 +38,6 @@ li.beta-badge {
   color: #cf0000;
   display: inline;
   text-decoration: none;
-  margin-right: 100px;
 }
 
 li a, .page-link-active {

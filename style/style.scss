@@ -9,14 +9,6 @@
     margin: 0%;
     width: 100%;
   }
-
-  body.bg-mf {
-    font-family: Arial, Helvetica, sans-serif;
-    background-image: url(../assets/img/megalos-background.png);
-    background-position: top;
-    width: 100%;
-    margin: 0%;
-  }
   /*
     -- Debut Navigations du site --
   */
@@ -34,10 +26,6 @@ nav {
   display: inline-block;
   vertical-align: top;
 }
-ul.nav{
-
-}
-
 li.page-link, .page-link-active, .beta-badge, .social-link {
   display: inline;
   margin-left: 25px;
@@ -47,7 +35,6 @@ li.beta-badge {
   color: #cf0000;
   display: inline;
   text-decoration: none;
-  margin-right: 100px;
 }
 
 li a, .page-link-active {
