@@ -1,2 +1,2 @@
-# test-website
-test du site web
+# Megalos-website
+Site Web de la team Mégalos.
