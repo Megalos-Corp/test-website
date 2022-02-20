@@ -120,12 +120,6 @@ padding-top: 50px;
 */
 @media screen and (max-width: 1024px) {
 
-
-  h1 {
-      font-size: 42px;
-      line-height: 56px;
-  }
-
   #hamburger-content {
       display: none;
   }
@@ -157,6 +151,7 @@ padding-top: 50px;
 
   h1.title-mf{
     font-size: 1.2em;
+    text-align: center;
   }
 
   #autogrid {
@@ -170,7 +165,7 @@ padding-top: 50px;
     height: auto;
     border: 0.8px inset #160d0d;
     }
-    #autogrid .autog-item img:hover{
+  #autogrid .autog-item img:hover{
       transition: 0.1s;
       border: 0.8px inset #fff01c;
     }
@@ -247,6 +242,7 @@ img.img-maintop{
 
 h1.title-mf{
   color: white;
+  text-align: center;
 }
 
 p.lead{
