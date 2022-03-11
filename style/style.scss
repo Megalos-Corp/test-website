@@ -1,5 +1,9 @@
+@import './caroussel.scss';
+@import './download-load.scss';
+
 * {
     box-sizing: border-box;
+
   }
   
   body.index {
@@ -35,6 +39,13 @@ li.beta-badge {
   color: #cf0000;
   display: inline;
   text-decoration: none;
+  background-color: #2a2b30;
+  border: none;
+  padding: 2px 6px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 5px;
 }
 
 li.page-link-active {
@@ -147,17 +158,15 @@ padding-top: 50px;
   img.navimg {
     width: 48px;
     margin-left: 10px;
-  }
 
-  h1.title-mf{
-    font-size: 1.2em;
-    text-align: center;
   }
 
   #autogrid {
     /*conteneur*/
+    position: relative;
+    left: 25%;
+    top: 10%;
     margin-bottom: 10px;
-    margin-left: 50%;
     }
 
   #autogrid .autog-item img {
@@ -189,7 +198,10 @@ div.maintop{
 
 img.img-maintop{
   width: 100%;
-  padding: 0.5%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
 }
 /* 
  -- Fin Main -- 
@@ -198,18 +210,20 @@ img.img-maintop{
 /* 
  -- Debut Footer -- 
 */
-/*footer{
-
+footer{
+  position: fixed;
+  left: 0;
+  bottom: 3px;
+  width: 100%;
+  text-align: center;
 }
 
 .footer p{
-  padding-top: 5px;
   font-weight: 200;
   font-size: 1.1em;
   text-align: center;
   transition: 0.2s;
-  padding-bottom: 3px;
-  color: #3b3b3b;
+  color: #727272;
  }
 
  p.footer-alt {
@@ -229,8 +243,12 @@ img.img-maintop{
 
  .subfooter p{
   font-size: 0.8em;
-
- }*/ 
+  position: fixed;
+  left: 0;
+  bottom: 3px;
+  width: 100%;
+  text-align: center;
+ }
 /*
  -- Fin Footer -- 
  */
@@ -241,14 +259,22 @@ img.img-maintop{
 
 
 h1.title-mf{
+  font-size: 2.5em;
   color: white;
+  position: relative;
+  left: 0;
+  bottom: 3px;
+  width: 100%;
   text-align: center;
 }
 
 p.lead{
+  font-size: 1.5em;
   color: white;
-  font-size: 1.8em;
-  margin: 1% 10% 0 13%;
+  position: relative;
+  left: 0;
+  bottom: 3px;
+  text-align: center;
 }
 
 p.sub-lead{
@@ -257,19 +283,24 @@ p.sub-lead{
   margin: 1% 10% 0 29%;
 }
 
-p.warning{
-  color: rgb(206, 64, 64);
-  font-size: 1.1em;
-  margin: 1% 10% 0 12%;
-}
-
 #autogrid {
   /*conteneur*/
-  margin-bottom: 30px;
-  margin-inline: 22%;
+  margin: 1% 10% 0 25.5%;
   bottom: 20px;
   }
   
+#autogrid-staff {
+    /*conteneur*/
+    margin: 1% 10% 0 12%;
+    bottom: 20px;
+    }
+#autogrid-staff .autog-item {
+      /* conteneur img */
+      justify-content: center;
+      display: inline-block;
+      margin-top: 2%;
+      margin-right: 20px;
+      }
   #autogrid .autog-item {
   /* conteneur img */
   justify-content: center;
@@ -287,3 +318,60 @@ p.warning{
     transition: 0.1s;
     border: 0.8px inset #fff01c;
   }
+
+  p.staff-card{
+    text-align: center;
+  }
+
+  #twitch-embed {
+    display: none;
+  }
+ /* Set height to 100% for body and html to enable the background image to cover the whole page: */
+
+.soon-bgimg {
+  /* Background image */
+  background-image: url('/w3images/forestbridge.jpg');
+  /* Full-screen */
+  height: 100%;
+  /* Center the background image */
+  background-position: center;
+  /* Scale and zoom in the image */
+  background-size: cover;
+  /* Add position: relative to enable absolutely positioned elements inside the image (place text) */
+  position: relative;
+  /* Add a white text color to all elements inside the .bgimg container */
+  color: white;
+  /* Add a font */
+  font-family: "Courier New", Courier, monospace;
+  /* Set the font-size to 25 pixels */
+  font-size: 25px;
+}
+
+/* Position text in the top-left corner */
+.soon-topleft {
+  position: absolute;
+  top: 0;
+  left: 16px;
+}
+
+/* Position text in the bottom-left corner */
+.soon-bottomleft {
+  position: absolute;
+  bottom: 0;
+  left: 16px;
+}
+
+/* Position text in the middle */
+.soon-middle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+/* Style the <hr> element */
+hr {
+  margin: auto;
+  width: 40%;
+} 

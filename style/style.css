@@ -1,3 +1,132 @@
+.slideshow-container {
+  max-width: 1500px;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #9e9e9e;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 0;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: .4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: .4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* The snackbar - position it at the bottom and in the middle of the screen */
+#snackbar {
+  visibility: hidden;
+  /* Hidden by default. Visible on click */
+  min-width: 250px;
+  /* Set a default minimum width */
+  margin-left: -125px;
+  /* Divide value of min-width by 2 */
+  background-color: #333;
+  /* Black background color */
+  color: #fff;
+  /* White text color */
+  text-align: center;
+  /* Centered text */
+  border-radius: 2px;
+  /* Rounded borders */
+  padding: 16px;
+  /* Padding */
+  position: fixed;
+  /* Sit on top of the screen */
+  z-index: 1;
+  /* Add a z-index if needed */
+  left: 50%;
+  /* Center the snackbar */
+  bottom: 30px;
+  /* 30px from the bottom */
+}
+
+/* Show the snackbar when clicking on a button (class added with JavaScript) */
+#snackbar.show {
+  visibility: visible;
+  /* Show the snackbar */
+  /* Add animation: Take 0.5 seconds to fade in and out the snackbar.
+    However, delay the fade out process for 2.5 seconds */
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+/* Animations to fade the snackbar in and out */
+@-webkit-keyframes fadein {
+  from {
+    bottom: 0;
+    opacity: 0;
+  }
+  to {
+    bottom: 30px;
+    opacity: 1;
+  }
+}
+
+@keyframes fadein {
+  from {
+    bottom: 0;
+    opacity: 0;
+  }
+  to {
+    bottom: 30px;
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeout {
+  from {
+    bottom: 30px;
+    opacity: 1;
+  }
+  to {
+    bottom: 0;
+    opacity: 0;
+  }
+}
+
+@keyframes fadeout {
+  from {
+    bottom: 30px;
+    opacity: 1;
+  }
+  to {
+    bottom: 0;
+    opacity: 0;
+  }
+}
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -38,6 +167,13 @@ li.beta-badge {
   color: #cf0000;
   display: inline;
   text-decoration: none;
+  background-color: #2a2b30;
+  border: none;
+  padding: 2px 6px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 5px;
 }
 
 li.page-link-active {
@@ -153,14 +289,12 @@ img.navimg {
     width: 48px;
     margin-left: 10px;
   }
-  h1.title-mf {
-    font-size: 1.2em;
-    text-align: center;
-  }
   #autogrid {
     /*conteneur*/
+    position: relative;
+    left: 25%;
+    top: 10%;
     margin-bottom: 10px;
-    margin-left: 50%;
   }
   #autogrid .autog-item img {
     width: 100%;
@@ -190,7 +324,10 @@ div.maintop {
 
 img.img-maintop {
   width: 100%;
-  padding: 0.5%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
 }
 
 /* 
@@ -199,39 +336,48 @@ img.img-maintop {
 /* 
  -- Debut Footer -- 
 */
-/*footer{
-
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 3px;
+  width: 100%;
+  text-align: center;
 }
 
-.footer p{
+.footer p {
+  font-weight: 200;
+  font-size: 1.1em;
+  text-align: center;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  color: #727272;
+}
+
+p.footer-alt {
   padding-top: 5px;
   font-weight: 200;
   font-size: 1.1em;
   text-align: center;
+  -webkit-transition: 0.2s;
   transition: 0.2s;
   padding-bottom: 3px;
-  color: #3b3b3b;
- }
+  color: #dddddd;
+}
 
- p.footer-alt {
-  padding-top: 5px;
-  font-weight: 200;
-  font-size: 1.1em;
+p.subfooter-alt {
+  font-size: 0.8em;
+  color: #dddddd;
+}
+
+.subfooter p {
+  font-size: 0.8em;
+  position: fixed;
+  left: 0;
+  bottom: 3px;
+  width: 100%;
   text-align: center;
-  transition: 0.2s;
-  padding-bottom: 3px;
-  color: #dddddd;
- }
+}
 
-  p.subfooter-alt {
-  font-size: 0.8em;
-  color: #dddddd;
- }
-
- .subfooter p{
-  font-size: 0.8em;
-
- }*/
 /*
  -- Fin Footer -- 
  */
@@ -239,14 +385,22 @@ img.img-maintop {
  -- Megalos page style -- 
  */
 h1.title-mf {
+  font-size: 2.5em;
   color: white;
+  position: relative;
+  left: 0;
+  bottom: 3px;
+  width: 100%;
   text-align: center;
 }
 
 p.lead {
+  font-size: 1.5em;
   color: white;
-  font-size: 1.8em;
-  margin: 1% 10% 0 13%;
+  position: relative;
+  left: 0;
+  bottom: 3px;
+  text-align: center;
 }
 
 p.sub-lead {
@@ -255,17 +409,26 @@ p.sub-lead {
   margin: 1% 10% 0 29%;
 }
 
-p.warning {
-  color: #ce4040;
-  font-size: 1.1em;
-  margin: 1% 10% 0 12%;
-}
-
 #autogrid {
   /*conteneur*/
-  margin-bottom: 30px;
-  margin-inline: 22%;
+  margin: 1% 10% 0 25.5%;
   bottom: 20px;
+}
+
+#autogrid-staff {
+  /*conteneur*/
+  margin: 1% 10% 0 12%;
+  bottom: 20px;
+}
+
+#autogrid-staff .autog-item {
+  /* conteneur img */
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: inline-block;
+  margin-top: 2%;
+  margin-right: 20px;
 }
 
 #autogrid .autog-item {
@@ -288,5 +451,63 @@ p.warning {
   -webkit-transition: 0.1s;
   transition: 0.1s;
   border: 0.8px inset #fff01c;
+}
+
+p.staff-card {
+  text-align: center;
+}
+
+#twitch-embed {
+  display: none;
+}
+
+/* Set height to 100% for body and html to enable the background image to cover the whole page: */
+.soon-bgimg {
+  /* Background image */
+  background-image: url("/w3images/forestbridge.jpg");
+  /* Full-screen */
+  height: 100%;
+  /* Center the background image */
+  background-position: center;
+  /* Scale and zoom in the image */
+  background-size: cover;
+  /* Add position: relative to enable absolutely positioned elements inside the image (place text) */
+  position: relative;
+  /* Add a white text color to all elements inside the .bgimg container */
+  color: white;
+  /* Add a font */
+  font-family: "Courier New", Courier, monospace;
+  /* Set the font-size to 25 pixels */
+  font-size: 25px;
+}
+
+/* Position text in the top-left corner */
+.soon-topleft {
+  position: absolute;
+  top: 0;
+  left: 16px;
+}
+
+/* Position text in the bottom-left corner */
+.soon-bottomleft {
+  position: absolute;
+  bottom: 0;
+  left: 16px;
+}
+
+/* Position text in the middle */
+.soon-middle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+/* Style the <hr> element */
+hr {
+  margin: auto;
+  width: 40%;
 }
 /*# sourceMappingURL=style.css.map */
