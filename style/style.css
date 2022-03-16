@@ -134,7 +134,7 @@
 
 body.index {
   font-family: Arial, Helvetica, sans-serif;
-  background-color: #2a2b30;
+  background-color: #494a52;
   background-position: top;
   margin: 0%;
   width: 100%;
@@ -268,7 +268,7 @@ img.navimg {
  -- Debut Main -- 
 */
 div.maintop {
-  background-color: #2a2b30;
+  background-color: #494a52;
   max-width: 99%;
   margin: 1% 1% 0 1%;
   display: block;
@@ -328,7 +328,6 @@ p.subfooter-alt {
 .subfooter p {
   font-size: 0.8em;
   position: fixed;
-  left: 0;
   bottom: 3px;
   width: 100%;
   text-align: center;
@@ -413,10 +412,6 @@ p.staff-card {
   text-align: center;
 }
 
-#twitch-embed {
-  display: none;
-}
-
 /* Set height to 100% for body and html to enable the background image to cover the whole page: */
 .soon-bgimg {
   /* Background image */
@@ -477,6 +472,10 @@ hr {
   display: table;
 }
 
+span#megalos-footer :hover {
+  color: #fff01c;
+}
+
 /* Float four columns side by side */
 .column {
   float: left;
@@ -489,6 +488,10 @@ hr {
 /* Remove extra left and right margins, due to padding in columns */
 .row {
   margin: 0 2%;
+}
+
+.row-index {
+  margin: 10px 0;
 }
 
 /* Clear floats after the columns */
@@ -505,6 +508,13 @@ hr {
   transition: 3ms;
   -webkit-transform: scale();
           transform: scale();
+}
+
+img#card-img-mp :hover {
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
+  border: 0.8px inset #fff01c;
+  border-radius: 16;
 }
 
 /* Responsive columns - one column layout (vertical) on small screens */

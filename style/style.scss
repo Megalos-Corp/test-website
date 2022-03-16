@@ -8,7 +8,7 @@
   
   body.index {
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #2a2b30;
+    background-color: #494a52;
     background-position: top;
     margin: 0%;
     width: 100%;
@@ -134,7 +134,7 @@ padding-top: 50px;
 */
 
 div.maintop{
-  background-color: #2a2b30;
+  background-color: #494a52;
   max-width: 99%;
   margin: 1% 1% 0 1%;
   display: block;
@@ -193,7 +193,6 @@ footer{
  .subfooter p{
   font-size: 0.8em;
   position: fixed;
-  left: 0;
   bottom: 3px;
   width: 100%;
   text-align: center;
@@ -271,10 +270,6 @@ p.sub-lead{
   p.staff-card{
     text-align: center;
   }
-
-  #twitch-embed {
-    display: none;
-  }
  /* Set height to 100% for body and html to enable the background image to cover the whole page: */
 
 .soon-bgimg {
@@ -334,6 +329,9 @@ hr {
   display: table;
 }
 
+span#megalos-footer :hover{
+  color: #fff01c;
+}
 // new ux
 /* Float four columns side by side */
 .column {
@@ -350,6 +348,11 @@ hr {
 
 }
 
+.row-index {
+  margin: 10px 0;
+
+}
+
 /* Clear floats after the columns */
 .row:after {
   content: "";
@@ -362,6 +365,11 @@ hr {
   text-align: center;
   transition: 3ms;
   transform: scale();
+}
+img#card-img-mp :hover{
+  transition: 0.1s;
+  border: 0.8px inset #fff01c;
+  border-radius: 16;
 }
 
 /* Responsive columns - one column layout (vertical) on small screens */
