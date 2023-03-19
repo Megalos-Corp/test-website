@@ -1,6 +1,3 @@
-var siteVersion = 'BETA 0.96'
-document.getElementById("siteVersion").innerHTML=siteVersion;
-
 let content = document.querySelector('#hamburger-content');
 let sidebarBody = document.querySelector('#hamburger-sidebar-body');
 
